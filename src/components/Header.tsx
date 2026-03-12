@@ -1,8 +1,8 @@
 import styles from './Header.module.css';
-
-
 interface HeaderProps {
-  title: string;        
+  title: string;  
+  userName?: string   
+   onLogout: () => void     
   onMenuClick: () => void;  }
 
 export default function Header({ title, onMenuClick }: HeaderProps) {
