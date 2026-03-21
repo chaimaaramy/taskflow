@@ -1,0 +1,18 @@
+ Q1 : Pourquoi <Navigate /> (composant) et pas navigate() (hook) ici ? 
+ <Navigate /> c'est du JSX  ça va dans un return
+navigate() c'est une fonction  ça va dans un handler ou un effet.
+ Q2 : Quelle différence entre navigate(from) et navigate(from, { replace: true }) ? 
+ navigate(from):il permet ajouter les entrer a l'historique.
+ navigate(from, { replace: true }): on permet de pas revenir en  arrière.
+ Q3 : Après un POST, pourquoi fait-on setProjects(prev => [...prev, data]) plutôt qu’un 
+re-fetch GET ?
+re-fetch GET: il permet de recuperer les donnes que tu as deja 
+setProjects(prev => [...prev, data]): en serveur il repond au post avec le projet cree on ajoute directement en state 
+Q5 : Quelle différence entre <Link> et <NavLink> ? Pourquoi NavLink ici ? 
+link: pour les liens.
+navlink: pour les navigator.
+Q6: les deuc composant ne change pas mais dans put le formumaire il pré-remplis et post le formumaire est vide 
+Q7: Oui le message d'erreur s'affiche.
+Q8: Avec Axios un 404 lance une erreur automatiquement donc le catch est déclenché et affiche "Erreur 404" Avec fetch il n'y aurait rien
+
+

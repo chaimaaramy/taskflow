@@ -22,7 +22,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   ); 
 } 
   
-// Custom hook pour consommer le context 
+
 export function useAuth() { 
   const context = useContext(AuthContext); 
   if (!context) { 

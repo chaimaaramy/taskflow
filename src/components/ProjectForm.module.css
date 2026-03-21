@@ -1,0 +1,61 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+ 
+.input {
+  padding: 8px 12px;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+ 
+.input:focus {
+  border-color: #27ae60;
+  box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.15);
+}
+ 
+.colorPicker {
+  width: 40px;
+  height: 36px;
+  border: none;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+ 
+.submit {
+  padding: 8px 16px;
+  background-color: #27ae60;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+ 
+.submit:hover {
+  background-color: #219150;
+}
+ 
+.cancel {
+  padding: 8px 16px;
+  background-color: #95a5a6;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+ 
+.cancel:hover {
+  background-color: #7f8c8d;
+}
