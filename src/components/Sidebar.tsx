@@ -10,11 +10,13 @@ interface Project {
 interface SidebarProps {
   projects: Project[];
   isOpen: boolean;
-  onRename: (project: Project) => void;  // ✅
-  onDelete: (id: string) => void;         // ✅
+  onRename: (project: Project) => void;  
+  onDelete: (id: string) => void;        
 }
 
 export default function Sidebar({ projects, isOpen, onRename, onDelete }: SidebarProps) {
+  console.log('Sidebar re-render'); // ✅ Bien placé en JS
+
   return (
     <aside className={`${styles.sidebar} ${isOpen ? styles.open : styles.closed}`}>
       <h2 className={styles.title}>Mes Projets</h2>
@@ -30,8 +32,8 @@ export default function Sidebar({ projects, isOpen, onRename, onDelete }: Sideba
               <span className={styles.dot} style={{ background: p.color }} />
               {p.name}
             </NavLink>
-            <button onClick={() => onRename(p)}>✏️</button>   {/* ✅ */}
-            <button onClick={() => onDelete(p.id)}>🗑️</button> {/* ✅ */}
+            <button onClick={() => onRename(p)}>✏️</button>
+            <button onClick={() => onDelete(p.id)}>🗑️</button>
           </li>
         ))}
       </ul>
